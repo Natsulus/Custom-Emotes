@@ -72,7 +72,8 @@ CustomEmotes.updateSettings = function(checkbox) {
 };
 
 CustomEmotes.AddList = function (form) {
-    CustomEmotes.loadList(form["emoteURLText"]);
+    CustomEmotes.loadList(form["emoteURLText"].value);
+    form["emoteURLText"].value = "https://";
 };
 
 CustomEmotes.createSettings = function() {
@@ -99,9 +100,12 @@ CustomEmotes.createSettings = function() {
 
     settingsInner += '</ul>' + '</div>'
         + '<div class="ce-pane control-group" id="ce-emotes-pane" style="display: none;">';
-    settingsInner += '<form name="emoteForm" action="" method="get">';
-    settingsInner += 'URL: <input type="text" name="emoteURLText" value="https://"><input type="button" value="Add" onclick="CustomEmotes.AddList(this.form)">';
-    settingsInner += '</form></div>';
+    settingsInner += '<form name="emoteForm" action="" method="get" style="width: 100%;">';
+    settingsInner += '<span style="font-size: 1.0em;">Emote List URL</span><br>'
+        + '<div style="display: inline-block; border: 1px solid black; position: relative; width: 100%;">'
+        + '<input type="text" name="emoteURLText" value="https://" style="width: 90%;">'
+        + '<input type="button" value="Add" onclick="CustomEmotes.AddList(this.form)" style="position: absolute; right: 0; height: 100%; border: none; width: 10%">';
+    settingsInner += '</div></form></div>';
     settingsInner += '<div class="ce-pane control-group" id="ce-updates-pane" style="display: none;">' + '<span>Current Version: ' + CustomEmotes.prototype.getVersion() + '</span>';
 
     if (CustomEmotes.prototype.getVersion() == CustomEmotes.updateLog[0].version)
@@ -394,7 +398,7 @@ CustomEmotes.prototype.getDescription = function () {
 };
 
 CustomEmotes.prototype.getVersion = function () {
-    return "0.1.0";
+    return "0.0.1";
 };
 
 CustomEmotes.prototype.getAuthor = function () {
