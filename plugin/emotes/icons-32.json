@@ -1,0 +1,885 @@
+{
+    "name": "Altus32",
+    "emotes": {
+        "[axe-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-0.png"
+        },
+        "[axe-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-1.png"
+        },
+        "[axe-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-2.png"
+        },
+        "[axe-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-3.png"
+        },
+        "[axe-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-4.png"
+        },
+        "[axe-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-5.png"
+        },
+        "[axe-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-6.png"
+        },
+        "[axe-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/axe-7.png"
+        },
+        "[blow-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-0.png"
+        },
+        "[blow-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-1.png"
+        },
+        "[blow-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-2.png"
+        },
+        "[blow-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-3.png"
+        },
+        "[blow-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-4.png"
+        },
+        "[blow-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-5.png"
+        },
+        "[blow-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-6.png"
+        },
+        "[blow-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/blow-7.png"
+        },
+        "[bow-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-0.png"
+        },
+        "[bow-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-1.png"
+        },
+        "[bow-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-2.png"
+        },
+        "[bow-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-3.png"
+        },
+        "[bow-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-4.png"
+        },
+        "[bow-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-5.png"
+        },
+        "[bow-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-6.png"
+        },
+        "[bow-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/bow-7.png"
+        },
+        "[cbow-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-0.png"
+        },
+        "[cbow-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-1.png"
+        },
+        "[cbow-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-2.png"
+        },
+        "[cbow-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-3.png"
+        },
+        "[cbow-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-4.png"
+        },
+        "[cbow-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-5.png"
+        },
+        "[cbow-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-6.png"
+        },
+        "[cbow-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/cbow-7.png"
+        },
+        "[chain-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-0.png"
+        },
+        "[chain-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-1.png"
+        },
+        "[chain-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-2.png"
+        },
+        "[chain-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-3.png"
+        },
+        "[chain-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-4.png"
+        },
+        "[chain-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-5.png"
+        },
+        "[chain-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-6.png"
+        },
+        "[chain-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/chain-7.png"
+        },
+        "[claw-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-0.png"
+        },
+        "[claw-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-1.png"
+        },
+        "[claw-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-2.png"
+        },
+        "[claw-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-3.png"
+        },
+        "[claw-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-4.png"
+        },
+        "[claw-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-5.png"
+        },
+        "[claw-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-6.png"
+        },
+        "[claw-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/claw-7.png"
+        },
+        "[dagger-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-0.png"
+        },
+        "[dagger-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-1.png"
+        },
+        "[dagger-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-2.png"
+        },
+        "[dagger-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-3.png"
+        },
+        "[dagger-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-4.png"
+        },
+        "[dagger-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-5.png"
+        },
+        "[dagger-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-6.png"
+        },
+        "[dagger-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/dagger-7.png"
+        },
+        "[fan-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-0.png"
+        },
+        "[fan-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-1.png"
+        },
+        "[fan-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-2.png"
+        },
+        "[fan-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-3.png"
+        },
+        "[fan-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-4.png"
+        },
+        "[fan-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-5.png"
+        },
+        "[fan-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-6.png"
+        },
+        "[fan-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fan-7.png"
+        },
+        "[fhl-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-0.png"
+        },
+        "[fhl-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-1.png"
+        },
+        "[fhl-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-2.png"
+        },
+        "[fhl-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-3.png"
+        },
+        "[fhl-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-4.png"
+        },
+        "[fhl-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-5.png"
+        },
+        "[fhl-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-6.png"
+        },
+        "[fhl-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/fhl-7.png"
+        },
+        "[gsword-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-0.png"
+        },
+        "[gsword-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-1.png"
+        },
+        "[gsword-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-2.png"
+        },
+        "[gsword-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-3.png"
+        },
+        "[gsword-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-4.png"
+        },
+        "[gsword-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-5.png"
+        },
+        "[gsword-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-6.png"
+        },
+        "[gsword-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gsword-7.png"
+        },
+        "[gun-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-0.png"
+        },
+        "[gun-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-1.png"
+        },
+        "[gun-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-2.png"
+        },
+        "[gun-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-3.png"
+        },
+        "[gun-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-4.png"
+        },
+        "[gun-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-5.png"
+        },
+        "[gun-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-6.png"
+        },
+        "[gun-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/gun-7.png"
+        },
+        "[katar-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-0.png"
+        },
+        "[katar-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-1.png"
+        },
+        "[katar-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-2.png"
+        },
+        "[katar-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-3.png"
+        },
+        "[katar-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-4.png"
+        },
+        "[katar-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-5.png"
+        },
+        "[katar-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-6.png"
+        },
+        "[katar-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/katar-7.png"
+        },
+        "[lsword-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-0.png"
+        },
+        "[lsword-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-1.png"
+        },
+        "[lsword-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-2.png"
+        },
+        "[lsword-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-3.png"
+        },
+        "[lsword-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-4.png"
+        },
+        "[lsword-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-5.png"
+        },
+        "[lsword-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-6.png"
+        },
+        "[lsword-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/lsword-7.png"
+        },
+        "[mace-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-0.png"
+        },
+        "[mace-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-1.png"
+        },
+        "[mace-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-2.png"
+        },
+        "[mace-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-3.png"
+        },
+        "[mace-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-4.png"
+        },
+        "[mace-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-5.png"
+        },
+        "[mace-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-6.png"
+        },
+        "[mace-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/mace-7.png"
+        },
+        "[pole-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-0.png"
+        },
+        "[pole-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-1.png"
+        },
+        "[pole-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-2.png"
+        },
+        "[pole-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-3.png"
+        },
+        "[pole-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-4.png"
+        },
+        "[pole-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-5.png"
+        },
+        "[pole-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-6.png"
+        },
+        "[pole-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/pole-7.png"
+        },
+        "[rapier-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-0.png"
+        },
+        "[rapier-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-1.png"
+        },
+        "[rapier-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-2.png"
+        },
+        "[rapier-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-3.png"
+        },
+        "[rapier-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-4.png"
+        },
+        "[rapier-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-5.png"
+        },
+        "[rapier-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-6.png"
+        },
+        "[rapier-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/rapier-7.png"
+        },
+        "[scythe-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-0.png"
+        },
+        "[scythe-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-1.png"
+        },
+        "[scythe-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-2.png"
+        },
+        "[scythe-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-3.png"
+        },
+        "[scythe-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-4.png"
+        },
+        "[scythe-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-5.png"
+        },
+        "[scythe-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-6.png"
+        },
+        "[scythe-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/scythe-7.png"
+        },
+        "[spear-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-0.png"
+        },
+        "[spear-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-1.png"
+        },
+        "[spear-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-2.png"
+        },
+        "[spear-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-3.png"
+        },
+        "[spear-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-4.png"
+        },
+        "[spear-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-5.png"
+        },
+        "[spear-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-6.png"
+        },
+        "[spear-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/spear-7.png"
+        },
+        "[staff-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-0.png"
+        },
+        "[staff-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-1.png"
+        },
+        "[staff-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-2.png"
+        },
+        "[staff-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-3.png"
+        },
+        "[staff-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-4.png"
+        },
+        "[staff-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-5.png"
+        },
+        "[staff-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-6.png"
+        },
+        "[staff-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/staff-7.png"
+        },
+        "[wand-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-0.png"
+        },
+        "[wand-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-1.png"
+        },
+        "[wand-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-2.png"
+        },
+        "[wand-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-3.png"
+        },
+        "[wand-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-4.png"
+        },
+        "[wand-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-5.png"
+        },
+        "[wand-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-6.png"
+        },
+        "[wand-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/wand-7.png"
+        },
+        "[warham-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-0.png"
+        },
+        "[warham-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-1.png"
+        },
+        "[warham-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-2.png"
+        },
+        "[warham-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-3.png"
+        },
+        "[warham-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-4.png"
+        },
+        "[warham-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-5.png"
+        },
+        "[warham-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-6.png"
+        },
+        "[warham-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/warham-7.png"
+        },
+        "[whip-0]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-0.png"
+        },
+        "[whip-1]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-1.png"
+        },
+        "[whip-2]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-2.png"
+        },
+        "[whip-3]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-3.png"
+        },
+        "[whip-4]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-4.png"
+        },
+        "[whip-5]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-5.png"
+        },
+        "[whip-6]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-6.png"
+        },
+        "[whip-7]": {
+            "size": 32,
+            "type": "image",
+            "url": "https://natsulus.github.io/AltusViewer/altus/icons/32/whip-7.png"
+        }
+    }
+}

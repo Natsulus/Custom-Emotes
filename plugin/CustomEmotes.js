@@ -1,4 +1,4 @@
-//META{"name":"CustomEmotes"}
+//META{"name":"CustomEmotes"}*//
 
 function CustomEmotes() {}
 
@@ -10,6 +10,8 @@ CustomEmotes.settingsButton = null;
 CustomEmotes.settingsPanel = null;
 CustomEmotes.settingsLastTab = null;
 CustomEmotes.animationSpeed = 0.04;
+CustomEmotes.emoteLists = {};
+CustomEmotes.emoteLinks = {};
 CustomEmotes.updateLog = [];
 CustomEmotes.isReady = false;
 
@@ -69,6 +71,10 @@ CustomEmotes.updateSettings = function(checkbox) {
     }
 };
 
+CustomEmotes.AddList = function (form) {
+    CustomEmotes.loadList(form["emoteURLText"]);
+};
+
 CustomEmotes.createSettings = function() {
     CustomEmotes.settingsPanel = $("<div/>", {
         id: "ce-pane",
@@ -78,8 +84,10 @@ CustomEmotes.createSettings = function() {
         }
     });
 
-    var settingsInner = '<div class="scroller-wrap">' + '<div class="scroller settings-wrapper settings-panel">' + '<div class="tab-bar TOP">' + '<div class="tab-bar-item ce-tab" id="ce-settings-tab" onclick="CustomEmotes.prototype.changeTab(\'ce-settings-tab\');">Custom Emotes</div>' + '<div class="tab-bar-item ce-tab" id="ce-emotes-tab" onclick="CustomEmotes.prototype.changeTab(\'ce-emotes-tab\');">Emotes</div>' + '<div class="tab-bar-item ce-tab" id="ce-updates-tab" onclick="CustomEmotes.prototype.changeTab(\'ce-updates-tab\');">Updates</div>'
-        + '</div>' + '<div class="ce-settings">' + '<div class="ce-pane control-group" id="ce-settings-pane" style="display: none;">' + '<ul class="checkbox-group">';
+    var settingsInner = '<div class="scroller-wrap">' + '<div class="scroller settings-wrapper settings-panel">'
+        + '<div class="tab-bar TOP">' + '<div class="tab-bar-item ce-tab" id="ce-settings-tab" onclick="CustomEmotes.prototype.changeTab(\'ce-settings-tab\');">Custom Emotes</div>' + '<div class="tab-bar-item ce-tab" id="ce-emotes-tab" onclick="CustomEmotes.prototype.changeTab(\'ce-emotes-tab\');">Emotes</div>' + '<div class="tab-bar-item ce-tab" id="ce-updates-tab" onclick="CustomEmotes.prototype.changeTab(\'ce-updates-tab\');">Updates</div></div>'
+        + '<div class="ce-settings">'
+        + '<div class="ce-pane control-group" id="ce-settings-pane" style="display: none;">' + '<ul class="checkbox-group">';
 
     for (var aSetting in CustomEmotes.settingsArray) {
         var setting = CustomEmotes.settingsArray[aSetting];
@@ -89,12 +97,17 @@ CustomEmotes.createSettings = function() {
         }
     }
 
-    settingsInner += '</ul>' + '</div>' + '<div class="ce-pane control-group" id="ce-emotes-pane" style="display: none;"></div>';
+    settingsInner += '</ul>' + '</div>'
+        + '<div class="ce-pane control-group" id="ce-emotes-pane" style="display: none;">';
+    settingsInner += '<form name="emoteForm" action="" method="get">';
+    settingsInner += 'URL: <input type="text" name="emoteURLText" value="https://"><input type="button" value="Add" onclick="CustomEmotes.AddList(this.form)">';
+    settingsInner += '</form></div>';
+    settingsInner += '<div class="ce-pane control-group" id="ce-updates-pane" style="display: none;">' + '<span>Current Version: ' + CustomEmotes.prototype.getVersion() + '</span>';
 
     if (CustomEmotes.prototype.getVersion() == CustomEmotes.updateLog[0].version)
         settingsInner += '<span style="float: right;">Up To Date</span>';
     else
-        settingsInner += '<span style="float: right;"><a href="https://raw.githubusercontent.com/Natsulus/Custom-Emotes/gh-pages/plguin/CustomEmotes.js" download>Update to Version ' + CustomEmotes.updateLog[0].version + '</a></span>';
+        settingsInner += '<span style="float: right;"><a href="https://raw.githubusercontent.com/Natsulus/Custom-Emotes/gh-pages/plugin/CustomEmotes.js" download>Update to Version ' + CustomEmotes.updateLog[0].version + '</a></span>';
 
     settingsInner += '<div class="update-log" style="height: 325px;">';
     for (var i = 0; i < CustomEmotes.updateLog.length; i++) {
@@ -217,7 +230,7 @@ CustomEmotes.preloadImages = function() {
         CustomEmotes.preloadImages.list = [];
     }
 
-    for (var emote in CustomEmotes.emoteList) {
+    for (var emote in CustomEmotes.emoteLists) {
         var img = new Image();
         img.onload = function() {
             var index = CustomEmotes.preloadImages.list.indexOf(this);
@@ -227,9 +240,16 @@ CustomEmotes.preloadImages = function() {
             }
         };
         CustomEmotes.preloadImages.list.push(img);
-        img.src = CustomEmotes.emoteList[emote].url;
+        img.src = CustomEmotes.emoteLists[emote].url;
     }
-    console.log("[Custom Emotes] Preloading " + CustomEmotes.preloadImages.list.length + " emotes(s)")
+    console.log("[Custom Emotes] Preloading " + CustomEmotes.preloadImages.list.length + " emotes(s)");
+};
+
+CustomEmotes.loadList = function (url) {
+    $.getJSON(url, function (list) {
+        CustomEmotes.emoteLists[list.name] = list.emotes;
+        CustomEmotes.emoteLinks[list.name] = url;
+    });
 };
 
 CustomEmotes.getUpdateLog = function() {
@@ -245,6 +265,7 @@ CustomEmotes.prototype.load = function() {
     CustomEmotes.prototype.saveSettings();
 
     CustomEmotes.getUpdateLog();
+    CustomEmotes.isReady = true;
 
     $('head').append(
         '<style id="ce-css">'
@@ -269,6 +290,7 @@ CustomEmotes.prototype.unload = function() {
 };
 
 CustomEmotes.prototype.start = function() {
+    setInterval(CustomEmotes.getUpdateLog, 1000 * 60 * 60);
     MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
     var startTry = setInterval(function() {
         if (CustomEmotes.isReady) clearInterval(startTry);
@@ -297,41 +319,43 @@ CustomEmotes.parseEmotes = function (node) {
     if (node.length > 0) {
         var html = node.nodeValue;
         var match = false;
-        $.each(CustomEmotes.emoteList, function (key, emote) {
-            if (match) return;
-            var index = html.lastIndexOf(key);
-            if (index !== -1) {
-                match = true;
-                returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(0, index))));
+        $.each(CustomEmotes.emoteLists, function (name, list) {
+            $.each(list, function (key, emote) {
+                if (match) return;
+                var index = html.lastIndexOf(key);
+                if (index !== -1) {
+                    match = true;
+                    returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(0, index))));
 
-                var emoteNode = document.createElement("div");
-                emoteNode.className = "emotewrapper";
-                emoteNode.setAttribute("tooltip", key);
-                if (CustomEmotes.settings["enable-tooltips"]) emoteNode.className += " emote-tooltip";
-                emoteNode.style.cssText = "top: " + Math.ceil((emote.size - 8) / 2.5) + "px";
-                var emoteImage;
-                if (emote.type == "image") {
-                    emoteImage = document.createElement("div");
-                    emoteImage.className = "ce-emote";
-                    emoteImage.style.width = emote.size + "px";
-                    emoteImage.style.height = emote.size + "px";
-                    emoteImage.style.backgroundImage = "url('" + emote.url + "')";
-                    emoteImage.style.backgroundSize = emote.size + "px auto";
-                } else if (emote.type == "animation") {
-                    emoteImage = document.createElement("div");
-                    emoteImage.className = "ce-emote ce-emote-sprite";
-                    emoteImage.style.width = emote.size + "px";
-                    emoteImage.style.height = emote.size + "px";
-                    emoteImage.style.animationTimingFunction = "steps(" + (emote.steps - 1) + ")";
-                    emoteImage.style.animationDuration = (emote.steps * CustomEmotes.animationSpeed) + "s";
-                    emoteImage.style.backgroundImage = "url('" + emote.url + "')";
-                    emoteImage.style.backgroundSize = emote.size + "px auto";
+                    var emoteNode = document.createElement("div");
+                    emoteNode.className = "emotewrapper";
+                    emoteNode.setAttribute("tooltip", key);
+                    if (CustomEmotes.settings["enable-tooltips"]) emoteNode.className += " emote-tooltip";
+                    emoteNode.style.cssText = "top: " + Math.ceil((emote.size - 8) / 2.5) + "px";
+                    var emoteImage;
+                    if (emote.type == "image") {
+                        emoteImage = document.createElement("div");
+                        emoteImage.className = "ce-emote";
+                        emoteImage.style.width = emote.size + "px";
+                        emoteImage.style.height = emote.size + "px";
+                        emoteImage.style.backgroundImage = "url('" + emote.url + "')";
+                        emoteImage.style.backgroundSize = emote.size + "px auto";
+                    } else if (emote.type == "animation") {
+                        emoteImage = document.createElement("div");
+                        emoteImage.className = "ce-emote ce-emote-sprite";
+                        emoteImage.style.width = emote.size + "px";
+                        emoteImage.style.height = emote.size + "px";
+                        emoteImage.style.animationTimingFunction = "steps(" + (emote.steps - 1) + ")";
+                        emoteImage.style.animationDuration = (emote.steps * CustomEmotes.animationSpeed) + "s";
+                        emoteImage.style.backgroundImage = "url('" + emote.url + "')";
+                        emoteImage.style.backgroundSize = emote.size + "px auto";
+                    }
+                    emoteNode.appendChild(emoteImage);
+                    returnArr.push(emoteNode);
+
+                    returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(index + key.length))));
                 }
-                emoteNode.appendChild(emoteImage);
-                returnArr.push(emoteNode);
-
-                returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(index + key.length))));
-            }
+            });
         });
     }
     if (returnArr.length > 0) return returnArr;
