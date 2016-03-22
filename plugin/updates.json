@@ -1,0 +1,30 @@
+[
+	{
+		"version": "1.1.0",
+		"type": "Feature Update",
+		"data": [
+			"Added Update Panel",
+			"Update Panel displays a change/update log",
+			"Displays current version and new version if available",
+			"Disabling the plugin will now revert icons to text",
+			"Clears pre-loading queue if still up when toggling HD Icons"
+		]
+	},
+	{
+		"version": "1.0.1",
+		"type": "Bug Fix",
+		"data": [
+			"Fixed a bug where icons are left in text form for edited messages"
+		]
+	},
+	{
+		"version": "1.0.0",
+		"type": "Release",
+		"data": [
+			"View AltusRPG Icons (Weapons only currently)",
+			"Icons have tooltips on hover",
+			"Use 32x32 Icons or 400x400 Icons by toggling the HD Icons setting",
+			"Size of icons can be changed individually or all together (Limited to 12px - 40px as any smaller or larger is uselessly annoying)"
+		]
+	}
+]
