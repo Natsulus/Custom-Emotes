@@ -2,7 +2,7 @@
 
 function CustomEmotes() {}
 
-var observer;
+CustomEmotes.observer = null;
 
 CustomEmotes.settings = null;
 
@@ -45,7 +45,7 @@ CustomEmotes.updateSettings = function(checkbox) {
         case "enable-emotes":
             if (enabled) {
                 $(".chat").each(function() {
-                    observer.observe(this, {
+                    CustomEmotes.observer.observe(this, {
                         childList: true,
                         characterData: true,
                         attributes: false,
@@ -54,7 +54,7 @@ CustomEmotes.updateSettings = function(checkbox) {
                 });
                 CustomEmotes.process();
             } else {
-                observer.disconnect();
+                CustomEmotes.observer.disconnect();
                 $(".emotewrapper").replaceWith(function() {
                     return $(this).attr("tooltip");
                 });
@@ -105,7 +105,9 @@ CustomEmotes.createSettings = function() {
         + '<div style="display: inline-block; border: 1px solid black; position: relative; width: 100%;">'
         + '<input type="text" name="emoteURLText" value="https://" style="width: 90%;">'
         + '<input type="button" value="Add" onclick="CustomEmotes.AddList(this.form)" style="position: absolute; right: 0; height: 100%; border: none; width: 10%">';
-    settingsInner += '</div></form></div>';
+    settingsInner += '</div></form><br><span style="font-size: 1.0em;">Emote Lists</span>';
+    settingsInner += '<table class="ce-emote-table"><thead><tr><th width="25px"></th><th width="25%">Name</th><th>URL</th><th width="50px">Toggle</th></tr></thead><tbody id="custom-emote-table">';
+    settingsInner += '</tbody></table></div>';
     settingsInner += '<div class="ce-pane control-group" id="ce-updates-pane" style="display: none;">' + '<span>Current Version: ' + CustomEmotes.prototype.getVersion() + '</span>';
 
     if (CustomEmotes.prototype.getVersion() == CustomEmotes.updateLog[0].version)
@@ -249,10 +251,28 @@ CustomEmotes.preloadImages = function() {
     console.log("[Custom Emotes] Preloading " + CustomEmotes.preloadImages.list.length + " emotes(s)");
 };
 
+CustomEmotes.removeList = function (name) {
+    if (CustomEmotes.emoteLists[name]) {
+        delete CustomEmotes.emoteLists[name];
+        delete CustomEmotes.emoteLinks[name];
+        $("#" + name + "-TableList").remove();
+    }
+};
+
 CustomEmotes.loadList = function (url) {
     $.getJSON(url, function (list) {
-        CustomEmotes.emoteLists[list.name] = list.emotes;
-        CustomEmotes.emoteLinks[list.name] = url;
+        if (list.name && list.emotes) {
+            CustomEmotes.emoteLists[list.name] = list.emotes;
+            CustomEmotes.emoteLinks[list.name] = url;
+
+            var str = '<tr id="'
+                + list.name + '-TableList"><td><input type="button" title="Remove" value="X" onclick="CustomEmotes.removeList(\'' + list.name + '\')"></td><td>'
+                + list.name + '</td><td><input type="text" class="disabled-text" value="'
+                + url + '" disabled></td><td><input type="checkbox" id="'
+                + list.name + '"></td></tr>';
+            var row = $.parseHTML(str);
+            $("#custom-emote-table").append(row);
+        }
     });
 };
 
@@ -273,6 +293,7 @@ CustomEmotes.prototype.load = function() {
 
     $('head').append(
         '<style id="ce-css">'
+        + '.disabled-text {cursor: text !important; -webkit-user-select: initial !important;}'
         + '.update-title {font-size: 1.5em; margin-top: 0.67em; margin-bottom: 0.67em; margin-left: 0; margin-right: 0;}'
         + '.update-list {list-style-type: disc}'
         + '.update-log {background: white url(https://natsulus.github.io/Custom-Emotes/plugin/bg-panel.png) repeat-x bottom left; border: 1px solid #3C769D; color: #333333; padding: 11px; margin: 10px 0; overflow-y: auto; }'
@@ -300,7 +321,7 @@ CustomEmotes.prototype.start = function() {
         if (CustomEmotes.isReady) clearInterval(startTry);
         else return;
 
-        observer = new MutationObserver(function() {
+        CustomEmotes.observer = new MutationObserver(function() {
             CustomEmotes.processChat();
         });
 
@@ -308,7 +329,7 @@ CustomEmotes.prototype.start = function() {
             $(".chat").each(function() {
                 clearInterval(chatRetry);
                 if (CustomEmotes.settings["enable-emotes"]) {
-                    observer.observe(this, {childList: true, characterData: true, attributes: false, subtree: true});
+                    CustomEmotes.observer.observe(this, {childList: true, characterData: true, attributes: false, subtree: true});
                     CustomEmotes.processChat();
                 }
             });

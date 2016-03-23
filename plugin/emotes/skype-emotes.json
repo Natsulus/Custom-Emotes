@@ -1,0 +1,611 @@
+{
+    "name": "Skype Emotes",
+    "emotes": {
+        "(*)": {
+            "size": 20, 
+            "steps": 63,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7571.bmp"
+        },
+        "(:|": {
+            "size": 20, 
+            "steps": 68,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7507.bmp"
+        },
+        "(^)": {
+            "size": 20, 
+            "steps": 98,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7566.bmp"
+        },
+        "(angel)": {
+            "size": 20, 
+            "steps": 83,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7531.bmp"
+        },
+        "(angry)": {
+            "size": 20, 
+            "steps": 113,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7521.bmp"
+        },
+        "(bandit)": {
+            "size": 20, 
+            "steps": 101,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7560.bmp"
+        },
+        "(bartlett)": {
+            "size": 20, 
+            "steps": 79,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7593.bmp"
+        },
+        "(beer)": {
+            "size": 20, 
+            "steps": 75,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7567.bmp"
+        },
+        "(bike)": {
+            "size": 20, 
+            "steps": 12,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7600.bmp"
+        },
+        "(bow)": {
+            "size": 20, 
+            "steps": 59,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7539.bmp"
+        },
+        "(bug)": {
+            "size": 20, 
+            "steps": 77,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7578.bmp"
+        },
+        "(call)": {
+            "size": 20, 
+            "steps": 45,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7587.bmp"
+        },
+        "(cash)": {
+            "size": 20, 
+            "steps": 26,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7564.bmp"
+        },
+        "(cat)": {
+            "size": 20, 
+            "steps": 120,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7599.bmp"
+        },
+        "(chuckle)": {
+            "size": 20, 
+            "steps": 44,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7536.bmp"
+        },
+        "(clap)": {
+            "size": 20, 
+            "steps": 39,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7537.bmp"
+        },
+        "(coffee)": {
+            "size": 20, 
+            "steps": 27,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7562.bmp"
+        },
+        "(cool)": {
+            "size": 20, 
+            "steps": 37,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7503.bmp"
+        },
+        "(d)": {
+            "size": 20, 
+            "steps": 62,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7568.bmp"
+        },
+        "(devil)": {
+            "size": 20, 
+            "steps": 66,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7530.bmp"
+        },
+        "(dog)": {
+            "size": 20, 
+            "steps": 54,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7601.bmp"
+        },
+        "(doh)": {
+            "size": 20, 
+            "steps": 59,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7520.bmp"
+        },
+        "(drunk)": {
+            "size": 20, 
+            "steps": 48,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7574.bmp"
+        },
+        "(e)": {
+            "size": 20, 
+            "steps": 53,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7582.bmp"
+        },
+        "(emo)": {
+            "size": 20, 
+            "steps": 53,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7547.bmp"
+        },
+        "(envy)": {
+            "size": 20, 
+            "steps": 67,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7532.bmp"
+        },
+        "(f)": {
+            "size": 20, 
+            "steps": 82,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7555.bmp"
+        },
+        "(facepalm)": {
+            "size": 20, 
+            "steps": 76,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7529.bmp"
+        },
+        "(film)": {
+            "size": 20, 
+            "steps": 54,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7584.bmp"
+        },
+        "(flex)": {
+            "size": 20, 
+            "steps": 58,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7565.bmp"
+        },
+        "(handshake)": {
+            "size": 20, 
+            "steps": 61,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7550.bmp"
+        },
+        "(happy)": {
+            "size": 20, 
+            "steps": 69,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7542.bmp"
+        },
+        "(headbang)": {
+            "size": 20, 
+            "steps": 70,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7572.bmp"
+        },
+        "(heidy)": {
+            "size": 20, 
+            "steps": 74,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7554.bmp"
+        },
+        "(highfive)": {
+            "size": 20, 
+            "steps": 37,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7551.bmp"
+        },
+        "(hrv)": {
+            "size": 20, 
+            "steps": 87,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7575.bmp"
+        },
+        "(hug)": {
+            "size": 20, 
+            "steps": 75,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7534.bmp"
+        },
+        "(idea)": {
+            "size": 20, 
+            "steps": 119,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7597.bmp"
+        },
+        "(inlove)": {
+            "size": 20, 
+            "steps": 62,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7515.bmp"
+        },
+        "(kate)": {
+            "size": 20, 
+            "steps": 107,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7535.bmp"
+        },
+        "(kiss)": {
+            "size": 20, 
+            "steps": 59,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7509.bmp"
+        },
+        "(lalala)": {
+            "size": 20, 
+            "steps": 19,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7553.bmp"
+        },
+        "(malthe)": {
+            "size": 20, 
+            "steps": 66,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7594.bmp"
+        },
+        "(mm)": {
+            "size": 20, 
+            "steps": 92,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7525.bmp"
+        },
+        "(mooning)": {
+            "size": 20, 
+            "steps": 45,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7591.bmp"
+        },
+        "(mp)": {
+            "size": 20, 
+            "steps": 88,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7585.bmp"
+        },
+        "(music)": {
+            "size": 20, 
+            "steps": 54,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7559.bmp"
+        },
+        "(n)": {
+            "size": 20, 
+            "steps": 54,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7549.bmp"
+        },
+        "(nerdy)": {
+            "size": 20, 
+            "steps": 47,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7526.bmp"
+        },
+        "(ninja)": {
+            "size": 20, 
+            "steps": 121,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7570.bmp"
+        },
+        "(o)": {
+            "size": 20, 
+            "steps": 59,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7583.bmp"
+        },
+        "(oliver)": {
+            "size": 20, 
+            "steps": 63,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7592.bmp"
+        },
+        "(party)": {
+            "size": 20, 
+            "steps": 70,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7523.bmp"
+        },
+        "(pi)": {
+            "size": 20, 
+            "steps": 90,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7563.bmp"
+        },
+        "(poolparty)": {
+            "size": 20, 
+            "steps": 87,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7575.bmp"
+        },
+        "(puke)": {
+            "size": 20, 
+            "steps": 78,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7519.bmp"
+        },
+        "(punch)": {
+            "size": 20, 
+            "steps": 43,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7588.bmp"
+        },
+        "(rain)": {
+            "size": 20, 
+            "steps": 29,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7556.bmp"
+        },
+        "(rock)": {
+            "size": 20, 
+            "steps": 11,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7576.bmp"
+        },
+        "(rofl)": {
+            "size": 20, 
+            "steps": 80,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7540.bmp"
+        },
+        "(shake)": {
+            "size": 20, 
+            "steps": 50,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7545.bmp"
+        },
+        "(sheep)": {
+            "size": 20, 
+            "steps": 111,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7598.bmp"
+        },
+        "(skype)": {
+            "size": 20, 
+            "steps": 1,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7589.bmp"
+        },
+        "(smirk)": {
+            "size": 20, 
+            "steps": 53,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7543.bmp"
+        },
+        "(smoking)": {
+            "size": 20, 
+            "steps": 64,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7577.bmp"
+        },
+        "(sun)": {
+            "size": 20, 
+            "steps": 25,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7557.bmp"
+        },
+        "(swear)": {
+            "size": 20, 
+            "steps": 76,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7573.bmp"
+        },
+        "(talk)": {
+            "size": 20, 
+            "steps": 46,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7586.bmp"
+        },
+        "(talktothehand)": {
+            "size": 20, 
+            "steps": 61,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7596.bmp"
+        },
+        "(tauri)": {
+            "size": 20, 
+            "steps": 74,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7595.bmp"
+        },
+        "(think)": {
+            "size": 20, 
+            "steps": 58,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7538.bmp"
+        },
+        "(tmi)": {
+            "size": 20, 
+            "steps": 55,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7561.bmp"
+        },
+        "(toivo)": {
+            "size": 20, 
+            "steps": 83,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7579.bmp"
+        },
+        "(tumbleweed)": {
+            "size": 20, 
+            "steps": 31,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7558.bmp"
+        },
+        "(wait)": {
+            "size": 20, 
+            "steps": 44,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7533.bmp"
+        },
+        "(waiting)": {
+            "size": 20, 
+            "steps": 50,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7546.bmp"
+        },
+        "(wasntme)": {
+            "size": 20, 
+            "steps": 75,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7522.bmp"
+        },
+        "(wave)": {
+            "size": 20, 
+            "steps": 56,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7528.bmp"
+        },
+        "(wfh)": {
+            "size": 20, 
+            "steps": 78,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7580.bmp"
+        },
+        "(whew)": {
+            "size": 20, 
+            "steps": 50,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7541.bmp"
+        },
+        "(worry)": {
+            "size": 20, 
+            "steps": 55,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7524.bmp"
+        },
+        "(y)": {
+            "size": 20, 
+            "steps": 39,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7548.bmp"
+        },
+        "(yawn)": {
+            "size": 20, 
+            "steps": 73,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7518.bmp"
+        },
+        "(yn)": {
+            "size": 20, 
+            "steps": 63,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7517.bmp"
+        },
+        ":$": {
+            "size": 20, 
+            "steps": 68,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7511.bmp"
+        },
+        ":(": {
+            "size": 20, 
+            "steps": 62,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7501.bmp"
+        },
+        ":)": {
+            "size": 20, 
+            "steps": 52,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7500.bmp"
+        },
+        ":D": {
+            "size": 20, 
+            "steps": 76,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7502.bmp"
+        },
+        ":O": {
+            "size": 20, 
+            "steps": 67,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7504.bmp"
+        },
+        ":P": {
+            "size": 20, 
+            "steps": 71,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7510.bmp"
+        },
+        ":^)": {
+            "size": 20, 
+            "steps": 69,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7512.bmp"
+        },
+        ":x": {
+            "size": 20, 
+            "steps": 49,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7527.bmp"
+        },
+        ":|": {
+            "size": 20, 
+            "steps": 66,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7508.bmp"
+        },
+        ";(": {
+            "size": 20, 
+            "steps": 49,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7506.bmp"
+        },
+        ";)": {
+            "size": 20, 
+            "steps": 35,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7505.bmp"
+        },
+        "<3": {
+            "size": 20, 
+            "steps": 16,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7552.bmp"
+        },
+        "\\o/": {
+            "size": 20, 
+            "steps": 205,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7569.bmp"
+        },
+        "zilmer": {
+            "size": 20, 
+            "steps": 61,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7581.bmp"
+        },
+        "|-(": {
+            "size": 20, 
+            "steps": 76,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7514.bmp"
+        },
+        "|-)": {
+            "size": 20, 
+            "steps": 71,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7513.bmp"
+        },
+        "}:)": {
+            "size": 20, 
+            "steps": 77,
+            "type": "animation",
+            "url": "https://megamit.github.io/BetterDiscordSkypeEmotes/emotes/7516.bmp"
+        }
+    }
+}
