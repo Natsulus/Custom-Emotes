@@ -262,14 +262,15 @@ CustomEmotes.removeList = function (name) {
 CustomEmotes.loadList = function (url) {
     $.getJSON(url, function (list) {
         if (list.name && list.emotes) {
-            CustomEmotes.emoteLists[list.name] = list.emotes;
-            CustomEmotes.emoteLinks[list.name] = url;
+            CustomEmotes.emoteLists[list.name.replace(/\s+/, "") ] = list.emotes;
+            CustomEmotes.emoteLinks[list.name.replace(/\s+/, "") ] = url;
 
             var str = '<tr id="'
-                + list.name + '-TableList"><td><input type="button" title="Remove" value="X" onclick="CustomEmotes.removeList(\'' + list.name + '\')"></td><td>'
+                + list.name.replace(/\s+/, "")  + '-TableList"><td><input type="button" title="Remove" value="X" onclick="CustomEmotes.removeList(\''
+                + list.name.replace(/\s+/, "")  + '\')"></td><td>'
                 + list.name + '</td><td><input type="text" class="disabled-text" value="'
                 + url + '" disabled></td><td><input type="checkbox" id="'
-                + list.name + '"></td></tr>';
+                + list.name.replace(/\s+/, "")  + '-Checkbox"></td></tr>';
             var row = $.parseHTML(str);
             $("#custom-emote-table").append(row);
         }
