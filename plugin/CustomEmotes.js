@@ -12,6 +12,7 @@ CustomEmotes.settingsLastTab = null;
 CustomEmotes.animationSpeed = 0.04;
 CustomEmotes.emoteLists = {};
 CustomEmotes.emoteLinks = {};
+CustomEmotes.emoteToggle = {};
 CustomEmotes.updateLog = [];
 CustomEmotes.isReady = false;
 
@@ -52,7 +53,7 @@ CustomEmotes.updateSettings = function(checkbox) {
                         subtree: true
                     });
                 });
-                CustomEmotes.process();
+                CustomEmotes.processChat();
             } else {
                 CustomEmotes.observer.disconnect();
                 $(".emotewrapper").replaceWith(function() {
@@ -69,6 +70,30 @@ CustomEmotes.updateSettings = function(checkbox) {
             }
             break;
     }
+};
+
+CustomEmotes.updateEmoteList = function (checkbox) {
+    var cb = $(checkbox);
+    var enabled = cb.is(":checked");
+    var id = cb.attr("id");
+    CustomEmotes.emoteToggle[id] = enabled;
+    localStorage.setItem("customEmoteToggles", JSON.stringify(CustomEmotes.emoteToggle));
+
+    CustomEmotes.observer.disconnect();
+    $(".emotewrapper").replaceWith(function() {
+        return $(this).attr("tooltip");
+    });
+    $(".ce-emotes-scanned").removeClass("ce-emotes-scanned");
+
+    $(".chat").each(function() {
+        CustomEmotes.observer.observe(this, {
+            childList: true,
+            characterData: true,
+            attributes: false,
+            subtree: true
+        });
+    });
+    CustomEmotes.processChat();
 };
 
 CustomEmotes.AddList = function (form) {
@@ -107,6 +132,26 @@ CustomEmotes.createSettings = function() {
         + '<input type="button" value="Add" onclick="CustomEmotes.AddList(this.form)" style="position: absolute; right: 0; height: 100%; border: none; width: 10%">';
     settingsInner += '</div></form><br><span style="font-size: 1.0em;">Emote Lists</span>';
     settingsInner += '<table class="ce-emote-table"><thead><tr><th width="25px"></th><th width="25%">Name</th><th>URL</th><th width="50px">Toggle</th></tr></thead><tbody id="custom-emote-table">';
+    for (name in CustomEmotes.emoteLinks) {
+        $.ajax({
+            url: CustomEmotes.emoteLinks[name],
+            dataType: 'json',
+            async: false,
+            success: function(list) {
+                if (list.name && list.emotes) {
+                    CustomEmotes.emoteLists[list.name.replace(/\s+/, "") ] = list.emotes;
+
+                    settingsInner += '<tr id="'
+                        + list.name.replace(/\s+/, "")  + '-TableList"><td><input type="button" title="Remove" value="X" onclick="CustomEmotes.removeList(\''
+                        + list.name.replace(/\s+/, "")  + '\')"></td><td>'
+                        + list.name + '</td><td><input type="text" class="disabled-text" value="'
+                        + CustomEmotes.emoteLinks[name] + '" disabled></td><td><input type="checkbox" id="'
+                        + list.name.replace(/\s+/, "")  + '" '
+                        + (CustomEmotes.emoteToggle[list.name.replace(/\s+/, "")] ? "checked" : "") + ' onclick="CustomEmotes.updateEmoteList(this);"></td></tr>';
+                }
+            }
+        });
+    }
     settingsInner += '</tbody></table></div>';
     settingsInner += '<div class="ce-pane control-group" id="ce-updates-pane" style="display: none;">' + '<span>Current Version: ' + CustomEmotes.prototype.getVersion() + '</span>';
 
@@ -255,7 +300,10 @@ CustomEmotes.removeList = function (name) {
     if (CustomEmotes.emoteLists[name]) {
         delete CustomEmotes.emoteLists[name];
         delete CustomEmotes.emoteLinks[name];
+        delete CustomEmotes.emoteToggle[name];
         $("#" + name + "-TableList").remove();
+        localStorage.setItem("customEmoteToggles", JSON.stringify(CustomEmotes.emoteToggle));
+        localStorage.setItem("customEmoteLists", JSON.stringify(CustomEmotes.emoteLinks));
     }
 };
 
@@ -264,15 +312,17 @@ CustomEmotes.loadList = function (url) {
         if (list.name && list.emotes) {
             CustomEmotes.emoteLists[list.name.replace(/\s+/, "") ] = list.emotes;
             CustomEmotes.emoteLinks[list.name.replace(/\s+/, "") ] = url;
+            CustomEmotes.emoteToggle[list.name.replace(/\s+/, "") ] = false;
 
             var str = '<tr id="'
                 + list.name.replace(/\s+/, "")  + '-TableList"><td><input type="button" title="Remove" value="X" onclick="CustomEmotes.removeList(\''
                 + list.name.replace(/\s+/, "")  + '\')"></td><td>'
                 + list.name + '</td><td><input type="text" class="disabled-text" value="'
                 + url + '" disabled></td><td><input type="checkbox" id="'
-                + list.name.replace(/\s+/, "")  + '-Checkbox"></td></tr>';
+                + list.name.replace(/\s+/, "")  + '" onclick="CustomEmotes.updateEmoteList(this);"></td></tr>';
             var row = $.parseHTML(str);
             $("#custom-emote-table").append(row);
+            localStorage.setItem("customEmoteLists", JSON.stringify(CustomEmotes.emoteLinks));
         }
     });
 };
@@ -288,6 +338,8 @@ CustomEmotes.getUpdateLog = function() {
 CustomEmotes.prototype.load = function() {
     CustomEmotes.settings = JSON.parse(localStorage.getItem("customEmotesSettings")) || CustomEmotes.prototype.getDefaultSettings();
     CustomEmotes.prototype.saveSettings();
+    CustomEmotes.emoteLinks = JSON.parse(localStorage.getItem("customEmoteLists")) || {};
+    CustomEmotes.emoteToggle = JSON.parse(localStorage.getItem("customEmoteToggles")) || {};
 
     CustomEmotes.getUpdateLog();
     CustomEmotes.isReady = true;
@@ -346,42 +398,44 @@ CustomEmotes.parseEmotes = function (node) {
         var html = node.nodeValue;
         var match = false;
         $.each(CustomEmotes.emoteLists, function (name, list) {
-            $.each(list, function (key, emote) {
-                if (match) return;
-                var index = html.lastIndexOf(key);
-                if (index !== -1) {
-                    match = true;
-                    returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(0, index))));
+            if (CustomEmotes.emoteToggle[name]) {
+                $.each(list, function (key, emote) {
+                    if (match) return;
+                    var index = html.lastIndexOf(key);
+                    if (index !== -1) {
+                        match = true;
+                        returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(0, index))));
 
-                    var emoteNode = document.createElement("div");
-                    emoteNode.className = "emotewrapper";
-                    emoteNode.setAttribute("tooltip", key);
-                    if (CustomEmotes.settings["enable-tooltips"]) emoteNode.className += " emote-tooltip";
-                    emoteNode.style.cssText = "top: " + Math.ceil((emote.size - 8) / 2.5) + "px";
-                    var emoteImage;
-                    if (emote.type == "image") {
-                        emoteImage = document.createElement("div");
-                        emoteImage.className = "ce-emote";
-                        emoteImage.style.width = emote.size + "px";
-                        emoteImage.style.height = emote.size + "px";
-                        emoteImage.style.backgroundImage = "url('" + emote.url + "')";
-                        emoteImage.style.backgroundSize = emote.size + "px auto";
-                    } else if (emote.type == "animation") {
-                        emoteImage = document.createElement("div");
-                        emoteImage.className = "ce-emote ce-emote-sprite";
-                        emoteImage.style.width = emote.size + "px";
-                        emoteImage.style.height = emote.size + "px";
-                        emoteImage.style.animationTimingFunction = "steps(" + (emote.steps - 1) + ")";
-                        emoteImage.style.animationDuration = (emote.steps * CustomEmotes.animationSpeed) + "s";
-                        emoteImage.style.backgroundImage = "url('" + emote.url + "')";
-                        emoteImage.style.backgroundSize = emote.size + "px auto";
+                        var emoteNode = document.createElement("div");
+                        emoteNode.className = "emotewrapper";
+                        emoteNode.setAttribute("tooltip", key);
+                        if (CustomEmotes.settings["enable-tooltips"]) emoteNode.className += " emote-tooltip";
+                        emoteNode.style.cssText = "top: " + Math.ceil((emote.size - 8) / 2.5) + "px";
+                        var emoteImage;
+                        if (emote.type == "image") {
+                            emoteImage = document.createElement("div");
+                            emoteImage.className = "ce-emote";
+                            emoteImage.style.width = emote.size + "px";
+                            emoteImage.style.height = emote.size + "px";
+                            emoteImage.style.backgroundImage = "url('" + emote.url + "')";
+                            emoteImage.style.backgroundSize = emote.size + "px auto";
+                        } else if (emote.type == "animation") {
+                            emoteImage = document.createElement("div");
+                            emoteImage.className = "ce-emote ce-emote-sprite";
+                            emoteImage.style.width = emote.size + "px";
+                            emoteImage.style.height = emote.size + "px";
+                            emoteImage.style.animationTimingFunction = "steps(" + (emote.steps - 1) + ")";
+                            emoteImage.style.animationDuration = (emote.steps * CustomEmotes.animationSpeed) + "s";
+                            emoteImage.style.backgroundImage = "url('" + emote.url + "')";
+                            emoteImage.style.backgroundSize = emote.size + "px auto";
+                        }
+                        emoteNode.appendChild(emoteImage);
+                        returnArr.push(emoteNode);
+
+                        returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(index + key.length))));
                     }
-                    emoteNode.appendChild(emoteImage);
-                    returnArr.push(emoteNode);
-
-                    returnArr.extend(CustomEmotes.parseEmotes(document.createTextNode(html.slice(index + key.length))));
-                }
-            });
+                });
+            }
         });
     }
     if (returnArr.length > 0) return returnArr;
@@ -404,6 +458,12 @@ CustomEmotes.processChat = function() {
 };
 
 CustomEmotes.prototype.stop = function () {
+    CustomEmotes.observer.disconnect();
+    $(".emotewrapper").replaceWith(function() {
+        return $(this).attr("tooltip");
+    });
+    $(".ce-emotes-scanned").removeClass("ce-emotes-scanned");
+    CustomEmotes.settingsButton.hide();
     console.log("[Custom Emotes] Stopped");
 };
 
@@ -420,7 +480,7 @@ CustomEmotes.prototype.getDescription = function () {
 };
 
 CustomEmotes.prototype.getVersion = function () {
-    return "0.0.1";
+    return "1.0.0";
 };
 
 CustomEmotes.prototype.getAuthor = function () {

@@ -1,9 +1,13 @@
 [
 	{
-		"version": "0.0.1",
-		"type": "Test Build",
+		"version": "1.0.0",
+		"type": "Release",
 		"data": [
-			"Currently incomplete and in-progress"
+			"View customs emotes and a tooltip on hover",
+			"Add as many custom emote lists as you want",
+            "Custom Emote Lists should follow the correct format",
+            "Animated Emotes are slightly buggy",
+            "Emote Menu is planned"
 		]
 	}
 ]
