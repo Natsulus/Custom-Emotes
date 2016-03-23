@@ -20,3 +20,4 @@ A BetterDiscord Plugin for Custom Emotes and Icons!
 
 - Emote List URL must start with https://
 - Emote Lists that don't work are the responsibility of the list's creator, not me
+- Careful of name conflicts that may cause one list to override another list. <br>e.g. "Skype Emotes" and "SkypeEmotes" are considered the same.
