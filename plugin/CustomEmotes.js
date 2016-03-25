@@ -328,10 +328,13 @@ CustomEmotes.loadList = function (url) {
 };
 
 CustomEmotes.getUpdateLog = function() {
-    $.getJSON("https://natsulus.github.io/Custom-Emotes/plugin/updates.json", function(log) {
-        CustomEmotes.updateLog = log;
-    }).fail(function(xhr, status, error) {
-        console.log("[Custom Emotes] Error Loading Update Log '" + status + ":" + error + "'.");
+    $.ajax({
+        url: "https://natsulus.github.io/Custom-Emotes/plugin/updates.json",
+        dataType: 'json',
+        async: false,
+        success: function (log) {
+            CustomEmotes.updateLog = log;
+        }
     });
 };
 
@@ -480,7 +483,7 @@ CustomEmotes.prototype.getDescription = function () {
 };
 
 CustomEmotes.prototype.getVersion = function () {
-    return "1.0.0";
+    return "1.0.1";
 };
 
 CustomEmotes.prototype.getAuthor = function () {

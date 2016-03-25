@@ -1,13 +1,20 @@
 [
 	{
+		"version": "1.0.1",
+		"type": "Bug Fix",
+		"data": [
+			"Sometimes failing to load the settings panel has been fixed."
+		]
+	},
+	{
 		"version": "1.0.0",
 		"type": "Release",
 		"data": [
 			"View customs emotes and a tooltip on hover",
 			"Add as many custom emote lists as you want",
-            "Custom Emote Lists should follow the correct format",
-            "Animated Emotes are slightly buggy",
-            "An Emote Menu and a better tooltip is planned"
+			"Custom Emote Lists should follow the correct format",
+			"Animated Emotes are slightly buggy",
+			"An Emote Menu and a better tooltip is planned"
 		]
 	}
 ]
