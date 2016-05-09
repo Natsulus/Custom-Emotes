@@ -3,7 +3,7 @@ A BetterDiscord Plugin for Custom Emotes and Icons!
 
 ## Installation
 
-1. Download <a href="https://natsulus.github.io/Custom-Emotes/plugin/CustomEmotes.js" download>this</a> to `%appdata%\BetterDiscord\plugins`.
+1. Download <a href="https://natsulus.github.io/Custom-Emotes/plugin/CustomEmotes.plugin.js" download>this</a> to `%appdata%\BetterDiscord\plugins`.
 2. Refresh/Open Discord.
 3. Enable the Custom Emote plugin.
 4. Re-open the User Settings window to see the Custom Emote settings tab.
