@@ -1,3 +1,5 @@
+__*NOTICE: Currently seems to be broken. Awaiting BDA Plugins v2 for a complete redesign, overhaul and fix.*__
+
 # Custom Emotes
 A BetterDiscord Plugin for Custom Emotes and Icons!
 
