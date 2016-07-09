@@ -1,4 +1,4 @@
-__*NOTICE: Currently seems to be broken. Awaiting BDA Plugins v2 for a complete redesign, overhaul and fix.*__
+__*NOTICE: Currently seems to be broken. Waiting for BDA Plugins v2 before doing a complete redesign, overhaul and fix of the plugin. Best option for now is to add your emotes to FFZ or BTTV.*__
 
 # Custom Emotes
 A BetterDiscord Plugin for Custom Emotes and Icons!
