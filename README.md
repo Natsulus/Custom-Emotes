@@ -2,9 +2,9 @@
 
 _Currently seems to be broken. Best option for now is to add your emotes to FFZ or BTTV._
 
-_I am currently waiting for BetterDiscord JS v2 and the plugin will be available shortly after that is released. The reason why I am waiting for it is because I do not want to rewrite code due to changes. v2 will add an onMessage event as well as disable localStorage access in place of something else, both of these being major features which will have an affect on this plugin._
+I am currently waiting for BetterDiscord JS v2 and the plugin will be available shortly after that is released. The reason why I am waiting for it is because I do not want to rewrite code due to changes. v2 will add an onMessage event as well as disable localStorage access in place of something else, both of these being major features which will have an affect on this plugin.
 
-_The new plugin will add support for other resolution ratios other than square and an emote menu as well as other features that may come out later along the line. I'm also looking into an auto updater which I may make as a separate plugin to allow other plugin developers to have an auto updater for their plugins._
+The new plugin will add support for other resolution ratios other than square and an emote menu as well as other features that may come out later along the line. I'm also looking into an auto updater which I may make as a separate plugin to allow other plugin developers to have an auto updater for their plugins.
 
 <hr>
 
